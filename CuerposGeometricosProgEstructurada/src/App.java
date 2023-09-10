@@ -16,14 +16,13 @@ public class App {
         System.out.println("16.Zona Esférica      17.Salir");
         int menu = lector.nextInt();
         int n=0;
-
-        //Componer
-        if(menu<17){
+        
+        if(menu>17){
             do{
                System.out.println("Opción inválida");
                System.out.println("Elija una opción válida");
                menu =lector.nextByte();
-               if(menu>17){
+               if(menu<17){
                 n++;
                }
             }while(n<=0 || n>=3);
@@ -252,12 +251,12 @@ public class App {
                 System.out.println("2. Longitud del apotema de la base");
                 int seleccion = lector.nextInt();
 
-                if(seleccion>=2){
+                if(seleccion>=3){
                     do{
                         System.out.println("Opción inválida");
                         System.out.println("Elija una opción válida");
                         seleccion =lector.nextInt();
-                        if(seleccion<=2){
+                        if(seleccion>=3){
                         y++;
                         }
                     }while(y<=0 || y>=3);
@@ -287,7 +286,7 @@ public class App {
                         System.out.println("Ingrese la longitud del apotema de la base: ");
                         ApotemaBase= lector.nextDouble(); 
                         }while(ApotemaBase<0);
-                        ladoB=(2*ApotemaBase*(Math.tan(Math.PI)/(nLados)));
+                        ladoB=(2*ApotemaBase*(Math.tan((Math.PI)/(nLados))));
                         ApotemaCara=(Math.sqrt((altura*altura)+(ApotemaBase*ApotemaBase)));
                         PerimetroB=(nLados*ladoB);
                         AreaL=(PerimetroB*ApotemaCara)/(2);
