@@ -16,7 +16,8 @@ public class App {
         System.out.println("16.Zona Esférica      17.Salir");
         int menu = lector.nextInt();
         int n=0;
-        
+
+        //Componer
         if(menu<17){
             do{
                System.out.println("Opción inválida");
